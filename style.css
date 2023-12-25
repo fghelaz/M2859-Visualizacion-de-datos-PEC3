@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 1280px;
+  color: #3b3b3b;
+  font-size: 24px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+
+
+a {
+  margin: 0;
+  font-weight: 400;
+}
+
+a,
+a:visited,
+a:hover {
+  color: teal;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #f3f3f3;
+  padding: 1rem;
+  padding-right: 5rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.nav__examples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.nav__examples > * {
+  margin-right: 0.5rem;
+}
+
+
+
+.intro__hed {
+  font-size: 1.7em;
+  margin: 0.5rem auto 0.5rem auto;
+  width: 600px; /* Ancho del cuadrado */
+}
+
+.intro__dek {
+  color: #8a8a8a;
+  width: 600px; /* Ancho del cuadrado */
+  height: 300px; /* Altura del cuadrado, igual que el ancho para formar un cuadrado */
+  margin: 0 auto; /* Centra el cuadrado horizontalmente */
+  overflow: auto; /* Añade barras de desplazamiento si el texto excede el cuadrado */
+  padding: 10px; /* Espacio interior para no pegar el texto a los bordes */
+  text-align: justify; /* Justifica el texto para una mejor presentación */
+  /* Añadir más estilos si es necesario */
+  
+}
+
+.intro__dek2 {
+  color: #494545;
+  width: 600px; /* Ancho del cuadrado */
+  height: 120px; /* Altura del cuadrado, igual que el ancho para formar un cuadrado */
+  margin: 0 auto; /* Centra el cuadrado horizontalmente */
+  overflow: auto; /* Añade barras de desplazamiento si el texto excede el cuadrado */
+  padding: 10px; /* Espacio interior para no pegar el texto a los bordes */
+  text-align: justify; /* Justifica el texto para una mejor presentación */
+  /* Añadir más estilos si es necesario */
+  
+}
+.intro__dek3 {
+  color: #494545;
+  width: 600px; /* Ancho del cuadrado */
+  height: 220px; /* Altura del cuadrado, igual que el ancho para formar un cuadrado */
+  margin: 0 auto; /* Centra el cuadrado horizontalmente */
+  overflow: auto; /* Añade barras de desplazamiento si el texto excede el cuadrado */
+  padding: 10px; /* Espacio interior para no pegar el texto a los bordes */
+  text-align: justify; /* Justifica el texto para una mejor presentación */
+  /* Añadir más estilos si es necesario */
+  
+}
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+#intro {
+  margin-bottom: 5px;
+  margin-top: 25px;
+  text-align: center; /* Centra el texto de todos los elementos internos */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Orientación vertical de los elementos */
+  align-items: center; /* Alineación horizontal al centro */
+  justify-content: center; /* Alineación vertical al centro */
+}
+
+#outro {
+  height: 40px;
+}
+
+@media (min-width: 840px) {
+  .nav__examples {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+}
+
+.anotacion {
+  position: absolute; /* Posicionamiento absoluto respecto a su contenedor relativo más cercano */
+  bottom: 0; /* Alineado al fondo del contenedor */
+  right: 0; /* Alineado a la derecha del contenedor */
+  color: #d3d3d3; /* Color gris claro */
+  font-size: 0.70rem; /* Tamaño de letra pequeño */
+  margin: 10px; /* Margen para no pegar el texto directamente al borde */
+  justify:right;
+}
+
+.lateral {
+ 
+  font-size: 1.2rem; /* Tamaño de letra pequeño */
+}
+
+.li{
+ 
+  font-size: 1.2rem; /* Tamaño de letra pequeño */
+}

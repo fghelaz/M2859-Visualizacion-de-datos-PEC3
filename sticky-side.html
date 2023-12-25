@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Scrollama: Sticky Side Example</title>
+	<meta name="description" content="Scrollama: Sticky Side Example" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="style.css" />
+	<style>
+		#scrolly {
+			position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			background-color: #f3f3f3;
+			padding: 1rem;
+		}
+
+		#scrolly>* {
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		}
+
+		article {
+			position: relative;
+			padding: 0 1rem;
+			max-width: 20rem;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			width: 100%;
+			height: 100vh;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			background-color: #fff;
+			z-index: 0;
+			display: flex;
+    		align-items: center;
+			justify-content: center;
+    		
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			color: #fff;
+			
+		}
+
+		figure img {
+    		width: 100%; /* La imagen se escala al 100% del ancho del contenedor */
+    		height: 100%; /* La imagen se escala al 100% de la altura del contenedor */
+    		object-fit: contain; /* Asegura que la imagen cubra completamente el contenedor, recortando si es necesario */
+		}
+
+		.step {
+			margin: 0 auto 2rem auto;
+			background-color: #3b3b3b;
+			color: #fff;
+			position: relative;
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active {
+			background-color: goldenrod;
+			color: #3b3b3b;
+		}
+
+		.step p {
+			text-align: match-parent;
+			padding: 0.6rem;
+			
+		}
+		fuente{
+  			position: absolute; /* Posicionamiento absoluto respecto al contenedor padre más cercano con posición relativa */
+			bottom: 0; /* Alinea el párrafo en la parte inferior del contenedor */
+			right: 0; /* Alinea el párrafo en la parte derecha del contenedor */
+			margin: 0; /* Ajusta o elimina el margen según sea necesario */
+			padding: 10px; /* Espacio alrededor del contenido dentro del párrafo, ajusta según sea necesario */
+			font-size: 0.5rem;
+		
+		}
+	</style>
+</head>
+
+<body>
+
+	<main>
+	
+		<section id="intro">
+			<h1 class="intro__hed">Los secuestros de ETA y sus
+organizaciones afines, 1970-1997</h1>
+			<p>   </p>
+			<p class="intro__dek2">  Esta visualización pretende describir la primera base de datos sistemática, basada en información documental, sobre las circunstancias de los secuestros cometidos en España por ETA y sus organizaciones afines: </p>
+			<p class="intro__dek">
+				El terrorismo ha causado en España décadas de muerte, totalitarismo, crueldad extrema, brutalidad despiadada y mucho dolor. 
+				Ese sufrimiento se ha materializado en daños humanos irreparables, tanto físicos como psicológicos, provocados por asesinatos, lesiones, amenazas, secuestros y extorsiones. Familias rotas por el dolor y la pérdida de sus seres queridos. Miles de personas forzadas a exiliarse de sus pueblos y ciudades.			</p>
+		</section>
+
+		<section id="scrolly">
+			<article>
+				<div class="step" data-step="1">
+					<p>LAS PRIMERAS VÍCTIMAS</p>
+					<p class="lateral"> Felipe Huarte Beaumont tenía 44 años y tres hijos cuando fue secuestrado en enero de 1973. Su familia pago 50 millones de pesetas por su liberación: 
+						</p>
+					<p class="lateral">"Sólo sé que toda mi fuerza de convicción, cuando me dieron lugar a ello, la empleé en convencerles para que si pedían algo a cambio da mi vida, como me daban a entender, 
+						exigieran lo que humanamente estuviera al alcance de mi familia."</p>
+					<p class="anotacion">Fuente:ABC</p>
+				</div>
+				<div class="step" data-step="2">
+					<p>SECUESTROS POR ETAPA</p>
+					<p class="lateral">Número de secuestros agrupados en cuatro etapas según circunstancias políticas relevantes: 1970-1975 (dictadura franquista), 
+						1976-1979 (transición previa a la autonomía vasca), 
+						<strong>1980-1985, el mayor número (primeros pasos de la autonomía vasca sin grandes movilizaciones sociales en contra de ETA)</strong> y 1986-1997 
+						(creación de Gesto por la Paz. Inicio de la movilización continuada de la sociedad vasca contra ETA)</p>
+					<p class="anotacion">Fuente:Revista Española de Ciencia Politica</p>	
+				</div>
+				<div class="step" data-step="4">
+					<p>LA ÚNICA MUJER SECUESTRADA</p>
+					<p class="lateral">
+						La pesadilla real de Mirentxu Elósegui ( hija del propietario de Boinas Elosegui) empezó cuando llamaron a la puerta de su domicilio. «Abrí enseguida –recordaba ella–. En el umbral había un individuo que me preguntó si era Mirentxu Elósegui. Asentí. Justo entonces apareció detrás otro sujeto encapuchado que se acercó a mí, apuntándome con su pistola. “Es un secuestro”, me advirtió».
+					</p>
+					<p class="lateral">
+						El secuestro se prolongaría 48 horas. “no se admitirán plazos ni regateo alguno” en el pago. 
+						Y la advertencia final: “El incumplimiento de todas las instrucciones y 
+						la puesta en peligro de cualquiera de nuestros militantes nos llevará a tomar la decisión de ejecutarla”.
+					</p>
+					<p class="anotacion">Fuente:El Independiente</p>
+				</div>
+
+				<div class="step" data-step="5">
+					<p>SECUESTROS POR AUTORIA</p>
+					<p class="lateral">ETApm es la responsable de más de la mitad (46) de los secuestros cometidos, mientras que ETAm, la organización más letal en cuanto a víctimas mortales, tan solo es la protagonista de un cuarto de los mismos (21)</p>
+					<p class="lateral"> De año 80 al año 85 todas las facciones de ETA cometen secuestros. Convergen los distintos objetivos en una misma herramienta, los secuestros de ETApm,
+						
+						ETApm VIII,
+					
+						ETAm y
+						
+						CAA se suceden bajo motivos políticos, sociales, ideológicos y economicos</p>
+					<p class="anotacion">Fuente:Revista Española de Ciencia Politica</p>		
+				</div>
+			
+
+					<div class="step" data-step="4">
+						<p>EL PADRE DE JULIO IGLESIAS</p>
+						<p class="lateral">
+							El 29 de diciembre de 1981 su padre, el doctor Iglesias Puga, 
+							sale de casa en su Renault 5 azul metalizado. 
+							Se dirige a su despacho en la clínica, pero nunca llega.
+						</p>
+						<p class="lateral">
+							El secuestro afecta a toda la familia. "Fue un trauma, nos pilló de sorpresa y nos cambió la vida", 
+							dice Chábeli sobre ella y sus hermanos. Tienen 10, 8 y 6 años y no terminan de comprender la dimensión 
+							de lo que está pasando. Éramos unos niños normales que iban al colegio andando y pasamos a llevar escolta". 
+							Y las cosas empeoraron. "Mi madre recibe una carta especificándole que pueden secuestrar a uno de nosotros".<br>
+							El doctor Puga fue liberado sin reconocer pago alguno. Su vida, como la de las demas víctimas, no volvio a ser igual.
+
+
+						</p>
+						<p class="anotacion">Fuente:RTVE</p>
+					</div>
+					
+					<div class="step" data-step="6">
+					<p>El PERFIL DE LOS SECUESTRADOS</p>
+					<p class="lateral"><strong> la mitad eran empresarios</strong>
+						(y un 5% familiares de estos)
+						 y un 23% directivos o profesionales de empresas.
+						 
+						 La gran mayoría de secuestros tuvieron o 
+						 bien una motivación económica (51%) o bien un trasfondo laboral (20%).</p>
+						<p class="lateral">
+							<strong> El 10% de los secuestros fueron de autoridades o 
+						 funcionarios públicos</strong> (
+							como el funcionario de prisiones José Antonio Ortega Lara o el cónsul de Alemania 
+							 Eugene Behil) y <strong> un 7% lo fueron de políticos</strong> como Javier Rupérez o Miguel Ángel Blanco.
+						</p>
+						<p class="anotacion">Fuente:Revista Española de Ciencia Politica</p>	
+				</div>
+				<div class="step" data-step="7">
+					<p>MAPA DE LOS SECUESTROS</p>
+					<p class="lateral">
+						Hay que señalar el hecho de que dos provincias del País Vasco concentren el 80%, 
+						es algo que posiblemente refleje la fortaleza que ha tenido ETA en cada territorio, 
+						ya que <strong>el secuestro requiere cierta logística para la cual se hace necesaria una mínima infraestructura.</strong>
+						<br>El mayor peso económico y empresarial, así como de la conflictividad laboral de <strong>Vizcaya</strong>, explican este predominio, al tratarse de móviles de tipo económico.</p>
+
+					<p class="anotacion">Fuente:Revista Española de Ciencia Politica</p>
+				
+				</div>
+
+				
+				<div class="step" data-step="8">
+					<p>EL MÁS LARGO</p>
+					<p class="lateral">
+						Las condiciones del secuestro de Ortega Lara fueron penosas: el zulo en el que se hallaba, 
+						muy húmedo, sin ventanas y situado bajo el 
+						suelo de una nave industrial, tenía unas dimensiones de 6 metros cuadrados. Sólo podía dar tres pasos en él. Disponía de una pequeña bombilla y, 
+						como no podía salir del habitáculo, recibía dos marmitas; una para hacer sus necesidades y otra para asearse. 
+						Le entregaban una bandeja con un vaso de agua, frutas y vegetales tres veces al día.
+						Recibía el periódico a diario y medicinas cuando las requería, también poseía un walkman y libros. 
+						En el momento de su rescate, Ortega Lara había perdido 23 kilos, masa muscular y densidad ósea. 
+						Sufría de trastornos del sueño, estrés postraumático, ansiedad y depresión. Fueron 532 días
+
+
+					</p>
+						
+					<p class="anotacion">Fuente:Wikipedia</p>
+				</div>
+
+
+
+
+
+
+				<div class="step" data-step="8">
+					<p>DURACIÓN</p>
+					<p class="lateral"><strong>ETApm es la organización que más ha secuestrado</strong>, 
+						dos tercios de los secuestros de 
+						esta organización <strong>duraron tan solo unas horas</strong>.
+						ETApm y ETAm  llevaron prácticas totalmente opuestas</strong>
+						 en lo que respecta al formato de secuestros: muchos y cortos los primeros, 
+						 largos y pocos los segundos
+						 El formato de secuestro sea muy similar <strong>en los CCAA, en la ETA anterior a 1974 y en ETA pm VIII asamblea, una media de días de entre 10 y 15</strong>, secuestros cortos o medios.</p>
+						<p class="anotacion">Fuente:Revista Española de Ciencia Politica</p>
+					
+				</div>
+				<div class="step" data-step="9">
+					<p>MOTIVACIÓN</p>
+					<p class="lateral" ><strong> finalidad recaudatoria es el motivo más común en todos los grupos excepto en ETApm, donde está a la par con el conflicto laboral. <br></strong>
+						Las demás motivaciones, son minoritarias y son agrupadas en las categorías de <strong>conflicto social </strong>(central nuclear de Lemóniz, problemas de expropiaciones...), <strong>presión política</strong> (ciertas reclamaciones como el acercamiento de presos) y <strong>castigo político</strong> (a dos militantes de organizaciones de extrema derecha, ambos asesinados).
+					</p>
+					<p class="anotacion">Fuente:Revista Española de Ciencia Politica</p>
+				</div>
+				
+				
+			</div>
+			<div class="step" data-step="9">
+				<p>UN EMPRESARIO EJEMPLAR</p>
+				<p class="lateral" >"No puedo perdonar a mis secuestradores". 
+					Es una de las pocas frases que se han podido oír de Emiliano Revilla, 
+					el empresario secuestrado en Madrid por ETA que fue liberado, 
+					tras 249 días de encierro, el 30 de octubre de 1988. Sobre su cautiverio: "Estuve en un claustro, de dos metros de largo 
+					por uno de ancho.Y ahí estaba la cama y el retrete. 249 días sin salir a ninguna parte". La mayor aportación para su pueblo vino
+					fue su faceta empresarial, que le ha permitido a la localidad soriana de Ólvega contar con 40 empresas por 
+					 iniciativa de Revilla y con 2.000 puestos de trabajo.
+
+					Y todo ello después de haber sufrido el tercer secuestro más largo.Un cuantioso rescate millonario hizo que ETA le pusiera en libertad.
+		
+				</p>
+
+				<p class="anotacion">Fuente:La Vanguardia</p>
+			</div>
+				
+				
+				
+				
+				
+				<div class="step" data-step="10">
+					<p>LOS RESULTADOS</p>
+					<p class="lateral">
+						En la mayoría de ocasiones, el secuestrado fue liberado sin daños 
+						, en dos pudieron escapar. Las fuerzas de seguridad lograron liberar en 6 ocasiones, 
+						mientras que en uno de cada cuatro casos la víctima sufrió daños físicos  
+					, siendo <strong>fatal el desenlace en 10 de ellos.</strong></p>
+						<p class="lateral">Secuestrar y después dejar herido a un empresario o 
+						directivo -con un <strong> disparo en la pierna o en ambas</strong>- era una de las maneras que tenía ETApm 
+						de inmiscuirse en los diversos conflictos laborales que 
+						durante la transición.
+						</p>
+
+					<p class="anotacion">Fuente:Revista Española de Ciencia Politica</p>
+				</div>
+
+				<div class="step" data-step="9">
+					<p>LA ÚLTIMA VÍCTIMA</p>
+					<p class="lateral" >Miguel Ángel Blanco fue asesinado el 13 de julio de 1997. 
+						Ocurrió por la tarde y recibiendo dos disparos en la nuca. Javier García Gaztelu, 
+						‘Txapote’, apretó el gatillo. Irantzu Gallastegi Sodupe, ‘Amaia’, su pareja, le interceptó.
+						 José Luis Geresta, 'Oker', le sujetaba mientras 'Txapote' disparaba. Y por último, 
+						 Ibon Muñoa, que trabajaba con Miguel Ángel, 
+						 fue el encargado de recopilar la información necesaria para realizar el secuestro.</p>
+
+						 <p class="lateral" >Ninguno de los participantes en el asesinato de Blanco ha mostrado signos de arrepentimiento.
+						  Miguel Ángel se fue con tan solo 29 años y vivió sus últimas 48 horas torturado, con la duda de si
+						   algún día saldría de allí con vida
+			
+					</p>
+	
+					<p class="anotacion">Fuente:La Cope</p>
+				</div>
+					
+			</article>
+
+			<figure>
+				
+				<img src="img/huarte.jpg" alt="Imagen Inicial" id="imageStep">
+
+			</figure>
+		</section>
+
+		<section id="outro"></section>
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+	<script src="scrollama.min.js"></script>
+	<script>
+		// using d3 for convenience
+		var main = d3.select("main");
+		var scrolly = main.select("#scrolly");
+		var figure = scrolly.select("figure");
+		var article = scrolly.select("article");
+		var step = article.selectAll(".step");
+
+		// initialize the scrollama
+		var scroller = scrollama();
+
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight * 0.75);
+			step.style("height", stepH + "px");
+
+			var figureHeight = window.innerHeight /1.5;
+			var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+			figure
+				.style("height", figureHeight + "px")
+				.style("top", figureMarginTop + "px");
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+    console.log(response);
+    // response = { element, direction, index }
+
+    // add color to current step only
+    step.classed("is-active", function (d, i) {
+        return i === response.index;
+    });
+
+    // update graphic based on step
+    figure.select("p").text(response.index+1);
+    var imgSrc = '';
+    switch(response.index) {
+		case 0:
+            imgSrc = 'img/huarte.jpg'; // No mostrar ninguna imagen para el primer paso
+            break;
+        case 1:
+            imgSrc ='img/secuestros_por_etapa_area_azul.png';// No mostrar ninguna imagen para el primer paso
+            break;
+		case 2:
+            imgSrc = 'img/Miren.png'; // Imagen para el paso 3
+        break;
+        case 3:
+            imgSrc ='img/porcentaje autoria.png';  // Imagen para el paso 2
+            break;
+		case 4:
+            imgSrc ='img/puga.png';  // Imagen para el paso 2
+            break;
+        case 5:
+            imgSrc = 'img/perfil.png'; // Imagen para el paso 3
+            break;
+		case 6:
+            imgSrc = 'img/mapa.png'; // Imagen para el paso 3
+			break;
+		
+		case 7:
+            imgSrc = 'img/lara.png'; // Imagen para el paso 3
+        break;	
+		case 8:
+            imgSrc = 'img/duracion.png'; // Imagen para el paso 3
+        break;
+		case 9:
+            imgSrc = 'img/motivacion.png'; // Imagen para el paso 3
+        break;
+		case 10:
+            imgSrc = 'img/revilla.png'; // Imagen para el paso 3
+        break;	
+		case 11:
+            imgSrc = 'img/resultados.png'; // Imagen para el paso 3
+        break;
+		case 12:
+            imgSrc = 'img/blanco.png'; // Imagen para el paso 3
+        break;			
+        // Añade más casos si tienes más pasos e imágenes
+    }
+    document.getElementById('imageStep').src = imgSrc;
+}
+
+
+		function init() {
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller
+				.setup({
+					step: "#scrolly article .step",
+					offset: 0.33,
+					debug: false
+				})
+				.onStepEnter(handleStepEnter);
+		}
+
+		// kick things off
+		init();
+	</script>
+<section id="outro"><p class="intro__dek3">  Alguien me dijo que esta fue una historia entre buenos y malos, 
+	y si los buenos hubieran sido realmente malos, hubiera sido muy diferente. 
+	Llegará en día que los buenos serán tildados de malos, escucharemos: “algo les haríamos…”. 
+	Quede aquí el relato de las víctimas y del esfuerzo de buena gente por no convertirse en mala gente…</p></section>
+
+</section>
+</body>
+
+</html>
